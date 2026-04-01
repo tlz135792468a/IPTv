@@ -32,23 +32,23 @@ jobs:
             ls -lh live.m3u
           else
             echo "❌ 未生成 live.m3u，任务退出"
-名字
-使用
+            exit 1
+          fi
 
-      - 控制+百万: 控制+换挡+m
-突耳切换: |
-切换
-切换
-突耳
+      - name: 提交并推送更新
+        run: |
+          git config user.name "bot"
+          git config user.email "bot@example.com"
+          git add live.m3u
 
-按键移动焦点。或者，使用
-退出键
+          echo "===== 检查文件变更 ====="
+          git status
 
-然后
-突耳
-移动到页面上的下一个交互元素。
+          git commit -m "auto update $(date +'%Y-%m-%d %H:%M:%S')" || {
+            echo "ℹ️ 无内容变更，跳过提交"
+            exit 0
           }
 
-使用
-控制+空间
-触发自动完成。
+          echo "===== 开始推送 ====="
+          git push
+          echo "✅ 推送完成"
