@@ -7,16 +7,48 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.10"
-      - run: python main.py
-      - name: Commit
+
+      - name: 运行更新脚本
         run: |
-          git config user.name "bot"
-          git config user.email "bot@example.com"
-          git add live.m3u
-          git commit -m "auto update" || exit 0
-          git push
+          echo "===== 开始运行 main.py ====="
+          python main.py
+          echo "===== 脚本运行完成 ====="
+
+      - name: 检查 live.m3u 是否生成
+        run: |
+          if [ -f "live.m3u" ]; then
+            echo "✅ live.m3u 已生成"
+            ls -lh live.m3u
+          else
+            echo "❌ 未生成 live.m3u，任务退出"
+名字
+使用
+
+      - 控制+百万: 控制+换挡+m
+突耳切换: |
+切换
+切换
+突耳
+
+按键移动焦点。或者，使用
+退出键
+
+然后
+突耳
+移动到页面上的下一个交互元素。
+          }
+
+使用
+控制+空间
+触发自动完成。
