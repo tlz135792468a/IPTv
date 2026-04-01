@@ -7,72 +7,47 @@ def generate():
     common_args = f"msisdn=c2b835cf-3fe5-46ef-a43a-fd53e36d3df2&mdspid=&spid=699004&netType=0&sid=2200179315&pid=2028597139&timestamp={ts}&SecurityKey={ts}&promotionId=&mvid=2200179315&mcid=500020&playurlVersion=WX-A1-9.3.2-RELEASE&userid=&jmhm=&videocodec=h264&appCode=miguvideo_h5&bean=mgsph5&tid=h5&conFee=0&encrypt=97ce09d192e9a04485fbcf481de8c72b&sv=10012"
 
     channels = [
-        # ========== 央视全台 ==========
-        ("CCTV-1 综合 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv1hd/50/index.m3u8?{common_args}"),
-        ("CCTV-2 财经 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv2hd/50/index.m3u8?{common_args}"),
-        ("CCTV-3 综艺 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv3hd/50/index.m3u8?{common_args}"),
-        ("CCTV-4 中文国际 HD",       f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4hd/50/index.m3u8?{common_args}"),
-        ("CCTV-4 欧视 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4ouhd/50/index.m3u8?{common_args}"),
-        ("CCTV-5 体育 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv5hd/50/index.m3u8?{common_args}"),
-        ("CCTV-5+ 体育赛事 HD",      f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv5phd/50/index.m3u8?{common_args}"),
-        ("CCTV-6 电影 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv6hd/50/index.m3u8?{common_args}"),
-        ("CCTV-7 国防军事 HD",       f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv7hd/50/index.m3u8?{common_args}"),
-        ("CCTV-8 电视剧 HD",         f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv8hd/50/index.m3u8?{common_args}"),
-        ("CCTV-9 纪录 HD",           f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv9hd/50/index.m3u8?{common_args}"),
-        ("CCTV-10 科教 HD",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv10hd/50/index.m3u8?{common_args}"),
-        ("CCTV-11 戏曲 HD",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv11hd/50/index.m3u8?{common_args}"),
-        ("CCTV-12 社会与法 HD",      f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv12hd/50/index.m3u8?{common_args}"),
-        ("CCTV-13 新闻 HD",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv13hd/50/index.m3u8?{common_args}"),
-        ("CCTV-14 少儿 HD",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv14hd/50/index.m3u8?{common_args}"),
-        ("CCTV-15 音乐 HD",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv15hd/50/index.m3u8?{common_args}"),
-        ("CCTV-16 奥林匹克 HD",      f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv16hd/50/index.m3u8?{common_args}"),
-        ("CCTV-17 农业农村 HD",      f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv17hd/50/index.m3u8?{common_args}"),
-
-        # ========== 央视4K ==========
-        ("CCTV-4K 超高清",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4k/50/index.m3u8?{common_args}"),
-        ("CCTV-8K 超高清",          f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv8k/50/index.m3u8?{common_args}"),
-
-        # ========== 全国卫视 ==========
-        ("湖南卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/hunanhd/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("浙江卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/zhejianghd/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("江苏卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jiangsu/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("东方卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/dongfang/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("北京卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/beijing/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("广东卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/gdwshd265/55/20200407/01.m3u8?&HlsSubType=&encrypt="),
-        ("深圳卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/shenzhen/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("山东卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/shandong/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("安徽卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/anhui/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("四川卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/sichuan/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("河南卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/henan/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("湖北卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/hubei/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("黑龙江卫视 HD",            "https://hlsbkmgsplive.miguvideo.com/migu/kailu/heilongjiang/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("辽宁卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/liaoning/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("重庆卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/chongqing/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("江西卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jiangxi/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("贵州卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/guizhou/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("山西卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/shanxi/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("陕西卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/shanxii/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("吉林卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jilin/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("天津卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/tianjin/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("东南卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/dongnan/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("宁夏卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/ningxia/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("甘肃卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/gansu/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("内蒙古卫视 HD",            "https://hlsbkmgsplive.miguvideo.com/migu/kailu/neimenggu/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("广西卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/guangxi/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("云南卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/yunnan/50/index.m3u8?&HlsSubType=&encrypt="),
-        ("新疆卫视 HD",              "https://hlsbkmgsplive.miguvideo.com/migu/kailu/xinjiang/50/index.m3u8?&HlsSubType=&encrypt="),
+        # 央视全台
+        ("CCTV-1 综合 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv1hd/50/index.m3u8?{common_args}"),
+        ("CCTV-2 财经 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv2hd/50/index.m3u8?{common_args}"),
+        ("CCTV-3 综艺 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv3hd/50/index.m3u8?{common_args}"),
+        ("CCTV-4 中文国际 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4hd/50/index.m3u8?{common_args}"),
+        ("CCTV-4 欧视 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4ouhd/50/index.m3u8?{common_args}"),
+        ("CCTV-5 体育 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv5hd/50/index.m3u8?{common_args}"),
+        ("CCTV-5+ 体育赛事 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv5phd/50/index.m3u8?{common_args}"),
+        ("CCTV-6 电影 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv6hd/50/index.m3u8?{common_args}"),
+        ("CCTV-7 国防军事 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv7hd/50/index.m3u8?{common_args}"),
+        ("CCTV-8 电视剧 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv8hd/50/index.m3u8?{common_args}"),
+        ("CCTV-9 纪录 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv9hd/50/index.m3u8?{common_args}"),
+        ("CCTV-10 科教 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv10hd/50/index.m3u8?{common_args}"),
+        ("CCTV-11 戏曲 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv11hd/50/index.m3u8?{common_args}"),
+        ("CCTV-12 社会与法 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv12hd/50/index.m3u8?{common_args}"),
+        ("CCTV-13 新闻 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv13hd/50/index.m3u8?{common_args}"),
+        ("CCTV-14 少儿 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv14hd/50/index.m3u8?{common_args}"),
+        ("CCTV-15 音乐 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv15hd/50/index.m3u8?{common_args}"),
+        ("CCTV-16 奥林匹克 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv16hd/50/index.m3u8?{common_args}"),
+        ("CCTV-17 农业农村 HD", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv17hd/50/index.m3u8?{common_args}"),
+        # 央视4K
+        ("CCTV-4K 超高清", f"https://hlsztemgsplive.miguvideo.com:443/migu/kailu/20200324/cctv4k/50/index.m3u8?{common_args}"),
+        # 卫视全覆盖
+        ("湖南卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/hunanhd/50/index.m3u8?&HlsSubType=&encrypt="),
+        ("浙江卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/zhejianghd/50/index.m3u8?&HlsSubType=&encrypt="),
+        ("江苏卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/jiangsu/50/index.m3u8?&HlsSubType=&encrypt="),
+        ("东方卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/dongfang/50/index.m3u8?&HlsSubType=&encrypt="),
+        ("北京卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/beijing/50/index.m3u8?&HlsSubType=&encrypt="),
+        ("广东卫视 HD", "https://hlsbkmgsplive.miguvideo.com/migu/kailu/gdwshd265/55/20200407/01.m3u8?&HlsSubType=&encrypt="),
     ]
 
-    m3u = "#EXTM3U\n"
-    txt = ""
+    m3u_content = "#EXTM3U\n"
+    txt_content = ""
     for name, url in channels:
-        m3u += f"#EXTINF:-1,{name}\n{url}\n"
-        txt += f"{name},{url}\n"
+        m3u_content += f"#EXTINF:-1,{name}\n{url}\n"
+        txt_content += f"{name},{url}\n"
 
     with open("live.m3u", "w", encoding="utf-8") as f:
-        f.write(m3u)
+        f.write(m3u_content)
     with open("live.txt", "w", encoding="utf-8") as f:
-        f.write(txt)
+        f.write(txt_content)
 
 if __name__ == "__main__":
     generate()
